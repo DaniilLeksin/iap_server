@@ -1,1 +1,12 @@
 Test Venice (https://github.com/nomad/venice) and ITunes-receipt (https://github.com/nov/itunes-receipt) gems with auto-renewable receipts
+
+post 'receipts/validateItunes' => 'receipts#validate_itunes'
+
+post 'receipts/validateVenice' => 'receipts#validate_venice'
+
+
+Pass 2 parameters in POST body:
+
+*receipt_data* - base64 receipt data
+
+*shared_secret* - shared secrey from itunes 
